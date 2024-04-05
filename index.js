@@ -16,8 +16,10 @@ let excludeDisplayNames = [
 "Onkar Ramesh Londhe"
 ]; 
 // Global Variables
-let username = "";
-let password = "";
+let username = "dshetkar0101@gmail.com";
+let apiToken = "";
+let base64Encode = btoa(`${username}:${apiToken}`);
+console.log(base64Encode);
 function createIssue(domain, user){
     let bodyData = {
         "fields": {
@@ -52,7 +54,7 @@ function createIssue(domain, user){
         url:`https://${domain}.atlassian.net/rest/api/3/issue`,
         method: 'POST',
         headers: {
-          'Authorization': `Basic `,
+          'Authorization': `Basic ${base64Encode}`,
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
@@ -69,7 +71,7 @@ domains.forEach((domain)=>{
         'url': `https://${domain}.atlassian.net/rest/api/3/user/assignable/search?project=KAN`,
         'headers': {
           'Content-Type': 'application/json',
-          'Authorization': 'Basic ',
+          'Authorization': `Basic ${base64Encode}`,
           'Cookie': 'atlassian.xsrf.token=54970bc8aef099cfb07c00f18edc90f6f1536012_lin'
         }
       };
