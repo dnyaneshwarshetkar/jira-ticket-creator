@@ -16,8 +16,8 @@ let excludeDisplayNames = [
 "Onkar Ramesh Londhe"
 ]; 
 // Global Variables
-let username = "dshetkar0101@gmail.com";
-let password = "ATATT3xFfGF047TMDnnMM9I0MqcrjAoDbu82dOqUlMYDZvCa9hMuw0pbLxGhyGBO_HTVoR_xGV46x1wnnGP9aFVk0TAHc_tx2RjGPsAdplOxGwXUgcxhLSVddLCSIjwuSBPqRcqUYbvz3xMzRz02V4vHssyllRyYs4F7FFbW2NCGSkOL4pm_KfA=5735C39B";
+let username = "";
+let password = "";
 function createIssue(domain, user){
     let bodyData = {
         "fields": {
@@ -52,7 +52,7 @@ function createIssue(domain, user){
         url:`https://${domain}.atlassian.net/rest/api/3/issue`,
         method: 'POST',
         headers: {
-          'Authorization': `Basic ZHNoZXRrYXIwMTAxQGdtYWlsLmNvbTpBVEFUVDN4RmZHRjA0N1RNRG5uTU05STBNcWNyakFvRGJ1ODJkT3FVbE1ZRFp2Q2E5aE11dzBwYkx4R2h5R0JPX0hUVm9SX3hHVjQ2eDF3bm5HUDlhRlZrMFRBSGNfdHgyUmpHUHNBZHBsT3hHd1hVZ2N4aExTVmRkTENTSWp3dVNCUHFSY3FVWWJ2ejN4TXpSejAyVjR2SHNzeWxsUnlZczRGN0ZGYlcyTkNHU2tPTDRwbV9LZkE9NTczNUMzOUI=`,
+          'Authorization': `Basic `,
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
@@ -69,7 +69,7 @@ domains.forEach((domain)=>{
         'url': `https://${domain}.atlassian.net/rest/api/3/user/assignable/search?project=KAN`,
         'headers': {
           'Content-Type': 'application/json',
-          'Authorization': 'Basic ZHNoZXRrYXIwMTAxQGdtYWlsLmNvbTpBVEFUVDN4RmZHRjA0N1RNRG5uTU05STBNcWNyakFvRGJ1ODJkT3FVbE1ZRFp2Q2E5aE11dzBwYkx4R2h5R0JPX0hUVm9SX3hHVjQ2eDF3bm5HUDlhRlZrMFRBSGNfdHgyUmpHUHNBZHBsT3hHd1hVZ2N4aExTVmRkTENTSWp3dVNCUHFSY3FVWWJ2ejN4TXpSejAyVjR2SHNzeWxsUnlZczRGN0ZGYlcyTkNHU2tPTDRwbV9LZkE9NTczNUMzOUI=',
+          'Authorization': 'Basic ',
           'Cookie': 'atlassian.xsrf.token=54970bc8aef099cfb07c00f18edc90f6f1536012_lin'
         }
       };
